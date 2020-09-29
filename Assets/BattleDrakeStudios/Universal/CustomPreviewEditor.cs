@@ -81,7 +81,7 @@ namespace BattleDrakeStudios.Utilities {
 
             if (Event.current.type == EventType.ScrollWheel) {
                 _scrollDelta = Event.current.delta.y;
-                _scrollDelta /= Event.current.shift ? 9 : 1;
+                _scrollDelta /= Event.current.shift ? 1 : 9;
                 GUI.changed = true;
             }
 
@@ -113,13 +113,17 @@ namespace BattleDrakeStudios.Utilities {
 
                 _previewUtil.camera.targetTexture.filterMode = _currentFilterMode;
 
-                if (_bgTexture != null)
+                if (_bgTexture != null) {
+                    _bgTexture.filterMode = _currentFilterMode;
                     GUI.DrawTexture(new Rect(0, 0, r.width * 2, r.height * 2), _bgTexture, ScaleMode.StretchToFill, true);
+                }
 
                 _previewUtil.camera.Render();
 
-                if (_fgTexture != null)
+                if (_fgTexture != null) {
+                    _fgTexture.filterMode = _currentFilterMode;
                     GUI.DrawTexture(new Rect(0, 0, r.width * 2, r.height * 2), _fgTexture, ScaleMode.StretchToFill, true);
+                }
 
                 _previewTexture = _previewUtil.EndStaticPreview();
 
@@ -185,14 +189,14 @@ namespace BattleDrakeStudios.Utilities {
                     if (position.Contains(current.mousePosition)) {
                         GUIUtility.hotControl = controlID;
                         current.Use();
-//                         EditorGUIUtility.SetWantsMouseJumping(1);
+                        EditorGUIUtility.SetWantsMouseJumping(1);
                     }
                     break;
                 case EventType.MouseUp:
                     if (GUIUtility.hotControl == controlID) {
                         GUIUtility.hotControl = 0;
                     }
-//                     EditorGUIUtility.SetWantsMouseJumping(0);
+                    EditorGUIUtility.SetWantsMouseJumping(0);
                     break;
                 case EventType.MouseDrag:
                     if (GUIUtility.hotControl == controlID) {
