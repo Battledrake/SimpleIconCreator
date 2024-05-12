@@ -19,7 +19,7 @@ To use, you can click the BattleDrakeCreations dropdown and simpleiconcreator.
 <br>-Use any asset gameobject. Don't need to enter play mode to use.
 <br>-Change material for the icon.
 <br>-Change light settings of preview window.
-<br>-Make the background transparent (You'll see the window go magenta. This is the trick to making the icon transparent, as it converts all magenta pixels into 0 alpha ones. If your object has a magenta color in it, you can change the transparency color right from the OnEnable in the IconCreatorWindow)
+<br>-Make the background transparent (You'll see the window go magenta. This is the trick to making the icon transparent, as it converts all magenta pixels into 0 alpha ones. If your object has a magenta color in it, you can change the transparency color used right from the OnEnable in the IconCreatorWindow.cs).
 <br>-Background and foreground textures. (Unity's URP/HDRP broke background textures. An issue that has been noted and Unity has acknowledged it as something they might re-allow in the future. Until then, if you want background textures, use Built-In)
 <br>-Save the icon in the resolution of your choice. Supports 32x32 up to 4096x4096. If you want an IconResolution that's not squared, you can go to the CreatePngFromTexture() method and just set the resolution in the ResizeTexture function.
   <br>-Saving using an existing filename will automatically overwrite it.
