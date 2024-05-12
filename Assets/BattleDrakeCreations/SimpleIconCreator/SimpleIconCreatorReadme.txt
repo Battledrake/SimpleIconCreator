@@ -7,12 +7,12 @@ Select Icon Resolution.
 Colored or Transparent backgrounds supported.
 
 Steps to use:
-- After installing package, go to BattleDrakeStudios/SimpleIconCreator.
+- After installing package, go to BattleDrakeCreations/SimpleIconCreator.
 - Drag and drop a prefab from your project files into the object field(Scene objects are not supported.) Can also click on the icon to show list of all objects and select from there.
 - Set icon resolution, transparency, background color, and icon name.
 New Feature: Can now set background texture by dragging and dropping the desired texture into the object field just below transparency button!
 Notice: Editor Window has to be at least twice the size of the preview window's size in order to avoid grey rendering. Resize if you notice your texture is being cutoff.
-- Press Create Icon when finished. Icon will save to BattleDrakeStudios/SimpleIconCreator/Icons.
+- Press Create Icon when finished. Icon will save to BattleDrakeCreations/SimpleIconCreator/Icons.
 
 Controls:
 - Left mouse button dragged left to right rotates object on the y axis(yaw), relative to the object.
@@ -32,4 +32,4 @@ When left on, the object would have an outline of the background color and was a
 This results in images with no background color bleeding, but also means the edges aren't smoothed, leaving them looking blocky when zoomed in.
 Non transparent icons have the standard filtermode applied.
 
-Support: BattleDrakeStudios@Gmail.com
+Support: BattleDrakeCreations@Gmail.com
