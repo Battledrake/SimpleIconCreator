@@ -141,7 +141,7 @@ namespace BattleDrakeCreations.Utilities
                 {
                     _bgTexture.filterMode = _currentFilterMode;
                     _previewUtil.camera.clearFlags = CameraClearFlags.Depth;
-                    GUI.DrawTexture(new Rect(0, 0, r.width * 2, r.height * 2), _bgTexture, ScaleMode.StretchToFill, true);
+                    GUI.DrawTexture(new Rect(0, 0, r.width, r.height), _bgTexture, ScaleMode.StretchToFill, true);
                 }
 
                 _previewUtil.camera.Render();
@@ -149,7 +149,7 @@ namespace BattleDrakeCreations.Utilities
                 if (_fgTexture != null)
                 {
                     _fgTexture.filterMode = _currentFilterMode;
-                    GUI.DrawTexture(new Rect(0, 0, r.width * 2, r.height * 2), _fgTexture, ScaleMode.StretchToFill, true);
+                    GUI.DrawTexture(new Rect(0, 0, r.width, r.height), _fgTexture, ScaleMode.StretchToFill, true);
                 }
 
                 _previewTexture = _previewUtil.EndStaticPreview();
